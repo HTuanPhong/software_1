@@ -1,0 +1,19 @@
+tree layout:
+
+|-build
+ |-result // binaries
+|-data // run env
+|-src
+ |-folders
+ |-vendors // 3rd parties
+
+cmake layout:
+
+root
+ |
+src
+ |----------------|
+src_folders    vendors
+                  |
+             lib_folders
+
