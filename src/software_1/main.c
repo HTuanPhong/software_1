@@ -1,9 +1,3 @@
-/* woodeneye-008.c ... */
-
-/*
- * This code is public domain. Feel free to use it for any purpose!
- */
-
 #define SDL_MAIN_USE_CALLBACKS 1 /* use the callbacks instead of main() */
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
@@ -329,6 +323,7 @@ static void initEdges(int scale, float (*edges)[6], int edges_len)
 
 SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
 {
+    //SDL_SetHint(SDL_HINT_MAIN_CALLBACK_RATE, "60");
     if (!SDL_SetAppMetadata("Example splitscreen shooter game", "1.0", "com.example.woodeneye-008")) {
         return SDL_APP_FAILURE;
     }
@@ -349,9 +344,11 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
     if (!SDL_Init(SDL_INIT_VIDEO)) {
         return SDL_APP_FAILURE;
     }
-    if (!SDL_CreateWindowAndRenderer("examples/demo/woodeneye-008", 640, 480, 0, &as->window, &as->renderer)) {
+    if (!SDL_CreateWindowAndRenderer("examples/demo/woodeneye-008", 1000, 1000, 0, &as->window, &as->renderer)) {
         return SDL_APP_FAILURE;
     }
+
+    SDL_Log(SDL_GetRendererName(as->renderer));
 
     as->player_count = 1;
     initPlayers(as->players, MAX_PLAYER_COUNT);
@@ -359,7 +356,7 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char *argv[])
     debug_string[0] = 0;
 
     SDL_SetRenderVSync(as->renderer, false);
-    SDL_SetWindowRelativeMouseMode(as->window, true);
+    //SDL_SetWindowRelativeMouseMode(as->window, true);
     SDL_SetHintWithPriority(SDL_HINT_WINDOWS_RAW_KEYBOARD, "1", SDL_HINT_OVERRIDE);
     return SDL_APP_CONTINUE;
 }
@@ -469,10 +466,6 @@ SDL_AppResult SDL_AppIterate(void *appstate)
     }
     past = now;
     accu += 1;
-    Uint64 elapsed = SDL_GetTicksNS() - now;
-    if (elapsed < 999999) {
-        SDL_DelayNS(999999 - elapsed);
-    }
     return SDL_APP_CONTINUE;
 }
 
@@ -480,4 +473,3 @@ void SDL_AppQuit(void *appstate, SDL_AppResult result)
 {
     SDL_free(appstate); // just free the memory, SDL will clean up the window/renderer for us.
 }
-

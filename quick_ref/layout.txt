@@ -1,6 +1,6 @@
 tree layout:
-
-|-build
+|-build // for debug
+|-release
  |-result // binaries
 |-data // run env
 |-src

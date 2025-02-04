@@ -1,0 +1,13 @@
+https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html#output-artifacts
+https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+https://wiki.libsdl.org/SDL3/FrontPage
+
+mkdir release
+cd release
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
+ninja
+
+mkdir debug
+cd debug
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug ..
+ninja

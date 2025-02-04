@@ -1,3 +1,0 @@
-https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html#output-artifacts
-https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
-https://wiki.libsdl.org/SDL3/FrontPage
