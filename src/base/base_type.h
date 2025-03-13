@@ -1,26 +1,29 @@
 #ifndef BASE_TYPES_H
 #define BASE_TYPES_H
 
-////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 // NOTE(phong): Standard Includes
 
 #include <stddef.h> //size_t ptrdiff_t
-#include <stdint.h>
+#include <stdint.h> //int_t
+#include <stdbool.h> //bool
 
-////////////////////////////////
-// NOTE(phong): Base Type
+////////////////////////////////////////////////////////////////////////////////
+// NOTE(phong): Rename base Type
 
-typedef uint8_t   u8;
-typedef uint16_t  u16;
-typedef uint32_t  u32;
-typedef uint64_t  u64;
-typedef int8_t    i8;
-typedef int16_t   i16;
-typedef int32_t   i32;
-typedef int64_t   i64;
-typedef float     f32;
-typedef double    f64;
-typedef size_t    uSize;
-typedef ptrdiff_t iSize;
+typedef uint8_t   U8;
+typedef uint16_t  U16;
+typedef uint32_t  U32;
+typedef uint64_t  U64;
+typedef int8_t    S8;
+typedef int16_t   S16;
+typedef int32_t   S32;
+typedef int64_t   S64;
+typedef float     F32;
+typedef double    F64;
+typedef size_t    Size;
+typedef uintptr_t UPtr;
+typedef _Bool     Bool;
+
 
 #endif //BASE_TYPES_H

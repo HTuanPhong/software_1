@@ -11,3 +11,5 @@ mkdir debug
 cd debug
 cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug ..
 ninja
+
+git submodule add -b main  https://github.com/libsdl-org/SDL_image ./src/vendors/SDL_image
