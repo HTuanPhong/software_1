@@ -6,10 +6,6 @@
 	path = src/vendors/SDL_image
 	url = https://github.com/libsdl-org/SDL_image
 	branch = main
-[submodule "src/vendors/SDL_shadercross"]
-	path = src/vendors/SDL_shadercross
-	url = https://github.com/libsdl-org/SDL_shadercross.git
-	branch = main
 [submodule "src/vendors/SDL_ttf"]
 	path = src/vendors/SDL_ttf
 	url = https://github.com/libsdl-org/SDL_ttf.git
