@@ -1,16 +1,8 @@
 #define SDL_MAIN_USE_CALLBACKS
 #include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h>
-#include <SDL3_shadercross/SDL_shadercross.h>
-typedef struct AppState AppState;
-struct AppState
-{
-	SDL_Window *window;
-	SDL_GPUDevice *gpu_device;
-	const char* base_path;
-	SDL_GPUGraphicsPipeline *fill_pipe;
-	SDL_GPUGraphicsPipeline *line_pipe;
-};
+#include "base/base_include.h"
+#include "software_1/soft_include.h"
 
 #define WINDOW_WIDTH 640
 #define WINDOW_HEIGHT 480
@@ -47,6 +39,10 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv)
         return SDL_APP_FAILURE;
     }
 
+	SDL_PropertiesID a = SDL_GetGPUDeviceProperties(state.gpu_device);
+	const char *str = SDL_GetStringProperty(a,SDL_PROP_GPU_DEVICE_NAME_STRING, "unknown");
+	SDL_Log(str);
+	
 	if (!SDL_ClaimWindowForGPUDevice(state.gpu_device, state.window))
 	{
 		SDL_Log("GPUClaimWindow failed: %s", SDL_GetError());

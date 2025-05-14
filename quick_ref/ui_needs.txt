@@ -1,0 +1,15 @@
+the ui structure state need to be able to save.
+the ui need to be able to undo. In a form of delta encoding.
+the ui need to be able to form tight(tiling) and loose windows.
+the ui need to have a command bar.
+the ui need to be run with gpu and maybe without.
+the ui must not have small unnoticeable buttons
+the ui must have some rounding bloom blur glow border.
+the ui can have a drag and drop from other windows or software.
+the ui can be customizeable.
+the ui shouldnt care for phone layout user decide.
+the ui must not change too much.
+
+plans
+
+shaders -> ui -> 3d shader -> ... -> engine.

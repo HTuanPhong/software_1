@@ -33,6 +33,7 @@
 //                  |                      +-----+-----+-----+-----+
 #endif
 
+// NOTE(phong): bytes of padding needed to align ptr x to a power-of-two alignment b
 #define AlignPadPow2(x, b) (-(UPtr)(x) & ((b) - 1))
 
 ////////////////////////////////////////////////////////////////////////////////
