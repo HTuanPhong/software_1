@@ -1,12 +1,15 @@
-[submodule "src/vendors/SDL3"]
-	path = src/vendors/SDL3
+[submodule "src/vendors/SDL"]
+	path = src/vendors/SDL
 	url = https://github.com/libsdl-org/SDL
-	branch = main
-[submodule "src/vendors/SDL_image"]
-	path = src/vendors/SDL_image
-	url = https://github.com/libsdl-org/SDL_image
-	branch = main
-[submodule "src/vendors/SDL_ttf"]
-	path = src/vendors/SDL_ttf
-	url = https://github.com/libsdl-org/SDL_ttf.git
-	branch = main
+[submodule "src/vendors/glslang"]
+	path = src/vendors/glslang
+	url = https://github.com/KhronosGroup/glslang.git
+[submodule "src/vendors/SPIRV-Cross"]
+	path = src/vendors/SPIRV-Cross
+	url = https://github.com/KhronosGroup/SPIRV-Cross.git
+[submodule "src/vendors/SPIRV-Tools"]
+	path = src/vendors/SPIRV-Tools
+	url = https://github.com/KhronosGroup/SPIRV-Tools.git
+[submodule "src/vendors/SPIRV-Headers"]
+	path = src/vendors/SPIRV-Headers
+	url = https://github.com/KhronosGroup/SPIRV-Headers.git
